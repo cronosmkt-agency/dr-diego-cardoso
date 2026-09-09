@@ -552,21 +552,21 @@ ${notes ? `*Observações:* ${notes}` : ""}`;
                 <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-950 text-cyan-300 border border-cyan-700/50">
                   {renderIcon("Activity")}
                 </div>
-                <span className="text-lg font-bold text-slate-900">{c['name']}</span>
+                <span className="text-lg font-bold text-slate-900">Dr. Diego Cardoso</span>
               </div>
               <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
-                {c['meta_desc']}
+                Consultas atenciosas e humanizadas de ouvido, nariz e garganta, exames de videolaringoscopia e cirurgias na Várzea, Teresópolis.
               </p>
             </div>
 
             <div>
               <h4 className="text-xs font-bold tracking-wider text-slate-900 uppercase">Endereço</h4>
-              <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{c['address']}</p>
+              <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{address}</p>
             </div>
 
             <div>
               <h4 className="text-xs font-bold tracking-wider text-slate-900 uppercase">Horários</h4>
-              <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{c['hours']}</p>
+              <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{hours}</p>
             </div>
 
             <div>
@@ -577,7 +577,7 @@ ${notes ? `*Observações:* ${notes}` : ""}`;
           </div>
 
           <div className="mt-12 border-t border-border pt-6 text-center text-xs text-muted-foreground">
-            © {new Date().getFullYear()} {c['name']} · Todos os direitos reservados · Desenvolvimento e Performance por Cronos Agency
+            © {new Date().getFullYear()} Dr. Diego Cardoso · Todos os direitos reservados · Desenvolvimento e Performance por Cronos Agency
           </div>
         </div>
       </footer>
