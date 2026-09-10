@@ -33,43 +33,83 @@
   --color-ring: var(--ring);
   --color-ring-offset-background: var(--background);
   --font-sans: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
-  --font-display: "Plus Jakarta Sans", "Inter", sans-serif;
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
 }
 
 :root {
   --radius: 1rem;
-  --background: #F0FDFA;
-  --foreground: #0F172A;
-  --card: #FFFFFF;
-  --card-foreground: #0F172A;
-  --popover: #FFFFFF;
-  --popover-foreground: #0F172A;
-  --primary: #1e3a8a;
+  --background: #f8fafc;
+  --foreground: #090e1a;
+  --card: #ffffff;
+  --card-foreground: #090e1a;
+  --popover: #ffffff;
+  --popover-foreground: #090e1a;
+  --primary: #0f172a;
   --primary-foreground: #ffffff;
-  --secondary: #F1F5F9;
-  --secondary-foreground: #0F172A;
-  --muted: #F1F5F9;
-  --muted-foreground: #64748B;
-  --accent: #06b6d4;
+  --secondary: #ecfeff;
+  --secondary-foreground: #0e7490;
+  --muted: #f0fdfa;
+  --muted-foreground: #475569;
+  --accent: #0891b2;
   --accent-foreground: #ffffff;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: rgba(15, 23, 42, 0.10);
-  --input: rgba(15, 23, 42, 0.10);
-  --ring: #06b6d4;
-  --font-sans: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
-  --font-display: "Plus Jakarta Sans", "Inter", sans-serif;
+  --border: rgba(14, 116, 144, 0.12);
+  --input: rgba(14, 116, 144, 0.12);
+  --ring: #0891b2;
 }
 
 @layer base {
   * {
     border-color: var(--border);
   }
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     background-color: var(--background);
     color: var(--foreground);
-    font-family: var(--font-sans);
+    font-family: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
+}
+
+@utility breath-glow {
+  background:
+    radial-gradient(1000px 500px at 50% -10%, rgba(8, 145, 178, 0.08), transparent 70%),
+    radial-gradient(800px 450px at 90% 20%, rgba(30, 58, 138, 0.05), transparent 60%),
+    linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+@utility glass-cyan {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(14, 116, 144, 0.14);
+  box-shadow: 0 12px 32px -10px rgba(14, 116, 144, 0.06), 0 2px 6px -1px rgba(14, 116, 144, 0.02);
+}
+
+@utility glass-navy-dark {
+  background: linear-gradient(145deg, #090f1f 0%, #0f172a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.4);
+}
+
+@utility glass-badge-cyan {
+  background: rgba(8, 145, 178, 0.08);
+  border: 1px solid rgba(8, 145, 178, 0.2);
+  color: #0e7490;
+}
+
+/* Hide scrollbar globally while keeping scroll functional */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
 }
